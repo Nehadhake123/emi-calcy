@@ -43,15 +43,9 @@ const App = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-r from-indigo-200 via-purple-400 to-blue-200 items-center justify-center p-4">
-    <div className="flex flex-col lg:flex-row max-w-6xl w-full p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl shadow-2xl space-y-8 lg:space-y-0 lg:space-x-8">
-      {/* Left section with EMI form */}
-      <div className="lg:w-1/2">
+    <div className="min-h-screen bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 flex items-center justify-center p-4">
+      <div className="max-w-4xl w-full p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl shadow-2xl">
         <EmiForm onCalculate={handleCalculate} />
-      </div>
-  
-      {/* Right section with result and breakdown */}
-      <div className="lg:w-1/2">
         {result && (
           <>
             <EmiResult result={result} />
@@ -60,8 +54,6 @@ const App = () => {
         )}
       </div>
     </div>
-  </div>
-  
   );
 };
 
